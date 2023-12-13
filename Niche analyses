@@ -198,13 +198,13 @@ sp2.range <- mask(envs, japo.mcp)
 swinhonis <- enmtools.species(range = sp1.range[[1]], presence.points = swin[, c(2,3)], species.name = 'swinhonis')
 japonicus <- enmtools.species(range = sp2.range[[1]], presence.points = japo[, c(2,3)], species.name = 'japonicus')
 
-#### niche equivalency test
+#### niche equivalency test == identity test
 niche.eq <- enmtools.ecospat.id(species.1 = swinhonis, species.2 = japonicus, env = envs, 
                                 nreps = 1000, R = 1000, bg.source = 'range', verbose = T)
 
 print(niche.eq)
 
-#### niche similarity test ::: swinhonis niche vs japonicus background 
+#### niche similarity test == symmetric background test
 niche.sim <- enmtools.ecospat.bg(species.1 = swinhonis, species.2 = japonicus, env = envs,
                                  nreps = 1000, test.type = 'symmetric', R = 1000, bg.source = 'range', verbose = T)
 
