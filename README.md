@@ -3,5 +3,5 @@ The MaxEnt ecological niche modeling workflow based on the SDMtune package (Vign
 
 ![image](https://github.com/yucheols/Gekko/assets/85914125/3ccb9d09-bdfa-484d-a5d6-dbfa1ced0c70)
 
-# Background
+- Background
 
