@@ -186,12 +186,12 @@ head(japo.metric)
 
 
 #### min diff_AUC & max test_AUC
-# species 1 ::: Gekko swinhonis == P 5 == 121th model
+# species 1 ::: Gekko swinhonis == LQHP 5 == 129th model
 (opt.sp1 <- swin.metric %>% dplyr::filter(diff_AUC == min(diff_AUC)) %>%
     dplyr::filter(test_AUC == max(test_AUC)))
 
 
-# species 2 ::: Gekko japonicus == HP 5 == 126th model
+# species 2 ::: Gekko japonicus == H 5 == 120th model
 (opt.sp2 <- japo.metric %>% dplyr::filter(diff_AUC == min(diff_AUC)) %>%
     dplyr::filter(test_AUC == max(test_AUC))) 
 
@@ -200,30 +200,30 @@ head(japo.metric)
 #####  PART 9 ::: variable importance & thresholds #####
 ### Variable Importance
 # swinhonis
-(s.varimp <- varImp(model = tune_models$models.sp1[[121]], permut = 10, progress = T))
+(s.varimp <- varImp(model = tune_models$models.sp1[[129]], permut = 10, progress = T))
 write.csv(s.varimp, 'revision1/varimp/swinhonis.csv')
 
 # japonicus
-(j.varimp <- varImp(model = tune_models$models.sp2[[126]], permut = 10, progress = T))
+(j.varimp <- varImp(model = tune_models$models.sp2[[120]], permut = 10, progress = T))
 write.csv(j.varimp, 'revision1/varimp/japonicus.csv')
 
 ### Percent Contribution
 # swinhonis
-(s.percon <- maxentVarImp(model = tune_models$models.sp1[[121]]) %>% dplyr::select(1,2))
+(s.percon <- maxentVarImp(model = tune_models$models.sp1[[129]]) %>% dplyr::select(1,2))
 write.csv(s.percon, 'revision1/varimp/swinhonis_percent_contribution.csv')
 
 # japonicus
-(j.percon <- maxentVarImp(model = tune_models$models.sp2[[126]]) %>% dplyr::select(1,2)) 
+(j.percon <- maxentVarImp(model = tune_models$models.sp2[[120]]) %>% dplyr::select(1,2)) 
 write.csv(j.percon, 'revision1/varimp/japonicus_percent_contribution.csv')
 
 
 ### Thresh
 # swinhonis
-s.thresh <- SDMtune::thresholds(model = combineCV(tune_models$models.sp1[[121]]), type = 'cloglog')
+s.thresh <- SDMtune::thresholds(model = combineCV(tune_models$models.sp1[[129]]), type = 'cloglog')
 write.csv(s.thresh, 'revision1/thresh/swinhonis_thresholds.csv')
 
 # japonicus
-j.thresh <- SDMtune::thresholds(model = combineCV(tune_models$models.sp2[[126]]), type = 'cloglog')
+j.thresh <- SDMtune::thresholds(model = combineCV(tune_models$models.sp2[[120]]), type = 'cloglog')
 write.csv(j.thresh, 'revision1/thresh/japonicus_thresholds.csv')
 
 
@@ -250,14 +250,14 @@ respDataPull <- function(model, var, type, only_presence, marginal, species_name
 
 ### G.swinhonis
 # pull data
-swin.resp.data <- respDataPull(model = tune_models$models.sp1[[121]], var = names(envs), type = 'cloglog', 
+swin.resp.data <- respDataPull(model = tune_models$models.sp1[[129]], var = names(envs), type = 'cloglog', 
                                only_presence = T, marginal = T, species_name = 'swinhonis')
 
 print(swin.resp.data)
 
 ### G.japonicus
 # pull data
-japo.resp.data <- respDataPull(model = tune_models$models.sp2[[126]], var = names(envs), type = 'cloglog',
+japo.resp.data <- respDataPull(model = tune_models$models.sp2[[120]], var = names(envs), type = 'cloglog',
                                only_presence = T, marginal = T, species_name = 'japonicus')
 
 print(japo.resp.data)
@@ -425,12 +425,12 @@ ggsave('revision1/plots/resp.jpg', width = 30, height = 22, dpi = 600, units = '
 #####  PART 11 ::: model prediction  #####
 #### current
 # G.swinhonis
-swin.pred <- SDMtune::predict(object = tune_models$models.sp1[[121]], data = terra::rast(envs), 
+swin.pred <- SDMtune::predict(object = tune_models$models.sp1[[129]], data = terra::rast(envs), 
                               type = 'cloglog', progress = T, clamp = T) %>% raster()
 plot(swin.pred)
 
 # G.japonicus
-japo.pred <- SDMtune::predict(object = tune_models$models.sp2[[126]], data = terra::rast(envs),
+japo.pred <- SDMtune::predict(object = tune_models$models.sp2[[120]], data = terra::rast(envs),
                               type = 'cloglog', clamp = T, progress = T) %>% raster()
 plot(japo.pred)
 
@@ -503,12 +503,12 @@ unitCheck(ref.env = envs, proj.env = proj.clim)
 
 ##### predict to future climate
 # G.swinhonis
-swin.proj <- SDMtune::predict(object = tune_models$models.sp1[[121]], data = terra::rast(proj.clim), 
+swin.proj <- SDMtune::predict(object = tune_models$models.sp1[[129]], data = terra::rast(proj.clim), 
                               type = 'cloglog', progress = T, clamp = T) %>% raster()
 plot(swin.proj)
 
 # G.japonicus
-japo.proj <- SDMtune::predict(object = tune_models$models.sp2[[126]], data = terra::rast(proj.clim),
+japo.proj <- SDMtune::predict(object = tune_models$models.sp2[[120]], data = terra::rast(proj.clim),
                               type = 'cloglog', progress = T, clamp = T) %>% raster()
 plot(japo.proj)
 
@@ -617,12 +617,12 @@ for (i in 1:nlayers(japo.full)) {
 #####  PART 13 ::: MESS  #####
 ## G.swinhonis
 swin.ref <- raster::extract(envs, swin[, c(2,3)]) %>% as.data.frame()
-swin.mess <- dismo::mess(x = proj.clim, v = swin.ref, full = F, filename = 'output/swinhonis/mess/swin_mess.tif', overwrite = T)
+swin.mess <- dismo::mess(x = proj.clim, v = swin.ref, full = F, filename = 'revision1/output/swinhonis/swin_mess.tif', overwrite = T)
 plot(swin.mess)
 
 ## G.japonicus
 japo.ref <- raster::extract(envs, japo[, c(2,3)]) %>% as.data.frame()
-japo.mess <- dismo::mess(x = proj.clim, v = japo.ref, full = F, filename = 'output/japonicus/mess/japo_mess.tif', overwrite = T)
+japo.mess <- dismo::mess(x = proj.clim, v = japo.ref, full = F, filename = 'revision1/output/japonicus/japo_mess.tif', overwrite = T)
 plot(japo.mess)
 
 
