@@ -4,7 +4,8 @@ MaxEnt ecological niche modeling workflow based on the SDMtune package (Vignali 
 ![image](https://github.com/yucheols/Gekko/assets/85914125/3ccb9d09-bdfa-484d-a5d6-dbfa1ced0c70)
 
 ## Study background
-- 
+- Currently, there are two gecko species known from South Korea: Gekko japonicus and G. swinhonis. Both species are not native to South Korea.
+- G. japonicus was known to be present in South Korea from at least 1885. The presence of G. swinhonis is reported in 2021. 
 
 ## Ecological niche modeling
 
@@ -14,7 +15,10 @@ MaxEnt ecological niche modeling workflow based on the SDMtune package (Vignali 
 
 ## Dataset
 - The "Dataset" folder contains all the data necessary to conduct the analyses done in this paper.
-- 
+- The "bg" subfolder contains the background points for each species that were used for MaxEnt modeling.
+- The "envs" subfolder contains the raster layers used for model calibration.
+- The "occs" subfolder contains the spatially thinned occurrence points for each species that were used for MaxEnt modeling.
+- The "proj_envs" subfolder contains the future climate layers used for model transfer.
 
 ## Citation
 A research article associated with this project is currently in press in the journal NeoBiota.
