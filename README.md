@@ -14,5 +14,5 @@ A research article associated with this project is currently in press in the jou
 
 ```
 I-K Park, Y Shin, H-J Baek, J Kim, D-I Kim, M Seok, Y Oh, D Park. 2024. Establishment potential for the two gecko
-species adapted to different climates, Gekko japonicus and G. swinhonis, introduced to South Korea. NeoBiota
+species adapted to different climates, Gekko japonicus and G. swinhonis, introduced to South Korea. NeoBiota.
 ```
