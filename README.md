@@ -6,7 +6,7 @@ MaxEnt ecological niche modeling workflow based on the SDMtune package (Vignali 
 ## Study background
 ![Figure_1](https://github.com/yucheols/Gekko/assets/85914125/7687a0a5-a940-4038-b85c-b759949b2af6)
 
-- Currently, there are two gecko species known from South Korea: Gekko japonicus and G. swinhonis. Both species are not native to South Korea.
+- Currently, there are two gecko species known from South Korea: Gekko japonicus (blue dots) and G. swinhonis (pink dots). Both species are not native to South Korea.
 - G. japonicus was known to be present in South Korea from at least 1885. The presence of G. swinhonis is first reported in 2021.
 - In South Korea, G. japonicus is found mostly in the southern coastal regions. On the other hand, G. swinhonis is only found in several locations in northwestern coastal region of South Korea.
 - Both gecko species were found in sympatry in this northwestern coastal site, implying that G. japonicus may have additional suitable habitats in South Korea.
