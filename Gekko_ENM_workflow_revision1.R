@@ -16,8 +16,7 @@ library(ENMeval)
 library(ggplot2)
 library(raster)
 library(terra)
-library(ENMTools)
-library(ecospat)
+
 
 #####  PART 1 ::: env data  #####
 # can download & prep WorldClim 2.1 data using the code below

@@ -1,4 +1,7 @@
 #####  PART 14 ::: optional == niche identity & background test in ecospat workflow  #####
+library(ENMTools)
+library(ecospat)
+
 #### generate MCPs for each sp. to define species-specific background
 ## make MCP
 #swin.mcp <- ConR::EOO.computing(swin[, c(3,2,1)], write_shp = T)
