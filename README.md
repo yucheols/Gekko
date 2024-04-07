@@ -23,7 +23,7 @@ MaxEnt ecological niche modeling workflow based on the SDMtune package (Vignali 
 
 - We quantified and compared the niches of two gecko species using the R packages ENMTools and ecospat.
 - To do so, we conducted both niche identity test and symmetric background test.
-- The results suggest non-identical niches attributable to underlying environmental differences in the ranges of the two gecko species.
+- The results suggest non-identical niches attributable to underlying environmental differences in the respective ranges of the two gecko species.
 
 ## Dataset
 - The "Dataset" folder contains all the data necessary to conduct the analyses done in this paper.
