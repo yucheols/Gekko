@@ -6,6 +6,12 @@ MaxEnt ecological niche modeling workflow based on the SDMtune package (Vignali 
 ## Study background
 - 
 
+## Ecological niche modeling
+
+## Niche quantification
+![Figure_6](https://github.com/yucheols/Gekko/assets/85914125/81b89675-745e-4280-9395-4ffe22cde992)
+
+
 ## Dataset
 -
 
