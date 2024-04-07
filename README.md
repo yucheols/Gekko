@@ -16,11 +16,14 @@ MaxEnt ecological niche modeling workflow based on the SDMtune package (Vignali 
 ![image](https://github.com/yucheols/Gekko/assets/85914125/3ccb9d09-bdfa-484d-a5d6-dbfa1ced0c70)
 
 - We modeled the current and future suitable habitats of two gecko species in South Korea using the MaxEnt algorithm.
+- The model predictions under current environment conditions suggest that there are broad areas of suitable, but currently unoccupied, habitats in South Korea for both species.
 
 ## Niche quantification
 ![Figure_6](https://github.com/yucheols/Gekko/assets/85914125/81b89675-745e-4280-9395-4ffe22cde992)
 
 - We quantified and compared the niches of two gecko species using the R packaged ENMTools and ecospat.
+- To do so, we conducted both niche identity test and symmetric background test.
+- The results suggest non-identical niches attributable to underlying environmental differences in the ranges of the two gecko species.
 
 ## Dataset
 - The "Dataset" folder contains all the data necessary to conduct the analyses done in this paper.
