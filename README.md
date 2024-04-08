@@ -3,17 +3,17 @@ MaxEnt ecological niche modeling workflow based on the SDMtune package (Vignali 
 
 ## Software and package dependencies
 - R (version 4.2.2)
-- SDMtune
-- ENMTools
-- ecospat
-- ENMeval
-- dplyr
-- raster
-- rgdal
-- terra
-- ggplot2
-- dismo
-- ConR
+- SDMtune (version 1.3.1)
+- ENMTools (version 1.0.5)
+- ecospat (version 4.0.0)
+- ENMeval (version 2.0.4)
+- dplyr (version 1.1.0)
+- raster (version 3.6.14)
+- rgdal (version 1.6.4)
+- terra (version 1.7.65)
+- dismo (version 1.3.14)
+- ConR (version 1.3.0)
+- ggplot2 (version 3.4.1)
 
 ## Study background
 ![Figure_1](https://github.com/yucheols/Gekko/assets/85914125/7687a0a5-a940-4038-b85c-b759949b2af6)
