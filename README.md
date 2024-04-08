@@ -1,7 +1,11 @@
 # Assessing the establishment potentials for the two gecko species introduced to South Korea (Gekko japonicus and G. swinhonis)
 MaxEnt ecological niche modeling workflow based on the SDMtune package (Vignali et al. 2020) and niche analyses using the packages ENMTools (Warren et al. 2021) and ecospat (Di Cola et al. 2017).
 
-
+## Software and package dependencies
+- R (version 4.2.2)
+- SDMtune
+- ENMTools
+- ecospat
 
 ## Study background
 ![Figure_1](https://github.com/yucheols/Gekko/assets/85914125/7687a0a5-a940-4038-b85c-b759949b2af6)
