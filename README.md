@@ -49,6 +49,5 @@ MaxEnt ecological niche modeling workflow based on the SDMtune package (Vignali 
 A research article associated with this project is currently in press in the journal NeoBiota.
 
 ```
-I-K Park, Y Shin, H-J Baek, J Kim, D-I Kim, M Seok, Y Oh, D Park. 2024. Establishment potential for the two gecko
-species adapted to different climates, Gekko japonicus and G. swinhonis, introduced to South Korea. NeoBiota.
+I-K Park, Y Shin, H-J Baek, J Kim, D-I Kim, M Seok, Y Oh, D Park. 2024. Establishment potential across South Korea for two gecko species, Gekko japonicus and G. swinhonis, adapted to different climates. NeoBiota.
 ```
