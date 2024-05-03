@@ -46,7 +46,7 @@ MaxEnt ecological niche modeling workflow based on the SDMtune package (Vignali 
 - The "proj_envs" subfolder contains the future climate layers used for model transfer.
 
 ## Citation
-A research article associated with this project is currently in press in the journal NeoBiota.
+A research article associated with this project has been published in the journal NeoBiota.
 
 ```
 I-K Park, Y Shin, H-J Baek, J Kim, D-I Kim, M Seok, Y Oh, D Park. 2024. Establishment potential across South Korea for two gecko species, Gekko japonicus and G. swinhonis, adapted to different climates. NeoBiota 93: 39-62.
